@@ -1,0 +1,26 @@
+<h1>
+  <%= pluralize(@surveys.count, "Survey") %>
+  <%= link_to("Create New Survey", surveys_path, { method: :post,  class: "btn btn-success pull-right" }) %>
+</h1>
+
+<% @surveys.each do |survey| %>
+  <div class="surveys-list-item">
+    <%= link_to(edit_survey_path(survey)) do %>
+      <div class="col-sm-5">
+        <%= survey.title %>
+      </div>
+
+      <div class="col-sm-3 text-muted">
+        <%= time_ago_in_words(survey.updated_at) %> ago
+      </div>
+
+      <div class="col-sm-2 text-muted">
+        <%= pluralize(survey.submissions.size, "Response") %>
+      </div>
+    <% end %>
+
+    <div class="col-sm-2 text-right">
+      <%= link_to("Delete", survey, method: :delete, class: "text-danger") %>
+    </div>
+  </div>
+<% end %>

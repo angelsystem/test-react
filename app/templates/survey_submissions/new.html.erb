@@ -1,0 +1,6 @@
+<% survey_component = SurveysView::Survey.new(@survey) %>
+
+<h1><%= @survey.title %></h1>
+<p><%= @survey.description %></p>
+
+<%= react_component("Survey", survey_component.as_hash, prerender: true) %>

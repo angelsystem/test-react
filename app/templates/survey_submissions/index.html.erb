@@ -1,0 +1,27 @@
+<h1><%= @survey.title %></h1>
+<p><%= @survey.description %></p>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <% @survey.questions.order_by_position.each do |question| %>
+          <th>
+            <%= question.title %>
+          </th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @survey.submissions.each do |submission| %>
+        <tr>
+          <% submission.responses.order_by_question_position.each do |response| %>
+            <td>
+              <%= response.answer %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

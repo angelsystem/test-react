@@ -1,0 +1,18 @@
+{
+  "name": "formidable",
+  "description": "",
+  "scripts": {},
+  "env": {},
+  "addons": [],
+  "env": {
+    "RAILS_ENV": "production",
+    "SECRET_KEY_BASE": {
+            "description": "This gets generated",
+            "generator": "secret"
+    },
+    "SENTRY_DSN": "https://a7b2f349496c4f4e99277091ad9a385e:22f07916698b4eaeb0d8d504de339650@app.getsentry.com/44717"
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}

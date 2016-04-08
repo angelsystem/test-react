@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formidable</title>
+
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class="layout-application" id="<%= controller.controller_name %>-<%=controller.action_name %>">
+    <% if current_admin %>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li><%= link_to("Surveys", root_path) %></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to("Sign Out", sign_out_path) %></li>
+          </ul>
+        </div>
+      </nav>
+
+      <% if @survey %>
+        <nav class="subnav navbar navbar-default">
+          <div class="container">
+            <ul class="nav navbar-nav">
+              <li class="<%= "active" if current_page?(edit_survey_path(@survey)) %>">
+                <%= link_to("Edit Survey", edit_survey_path(@survey)) %>
+              </li>
+              <li class="<%= "active" if current_page?(new_survey_submission_path(@survey)) %>">
+                <%= link_to("View Survey", new_survey_submission_path(@survey)) %>
+              </li>
+              <li class="<%= "active" if current_page?(survey_submissions_path(@survey)) %>">
+                <%= link_to("View Responses", survey_submissions_path(@survey)) %>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      <% end %>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

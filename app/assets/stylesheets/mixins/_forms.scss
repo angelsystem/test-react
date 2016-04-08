@@ -1,0 +1,12 @@
+.center-form {
+  @include center-block;
+  width: 400px;
+}
+
+.btn-aside {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  padding: 6px 0;
+}

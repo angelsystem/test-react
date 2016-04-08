@@ -1,0 +1,25 @@
+.Survey_Question_MultipleChoice {
+  @extend .form-inline;
+
+  .Survey_Question_MultipleChoice_RadioOption,
+  .Survey_Question_MultipleChoice_OtherOption {
+    @extend .radio;
+    display: block;
+    margin-bottom: 10px;
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      @extend .form-control;
+      margin-left: 10px;
+    }
+  }
+
+  .Survey_Question_MultipleChoice-Invalid {
+    .Survey_Question_MultipleChoice-Error-Message {
+      color: $state-danger-text;
+    }
+  }
+}

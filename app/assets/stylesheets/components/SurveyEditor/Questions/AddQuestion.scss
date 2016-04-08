@@ -1,0 +1,32 @@
+.SurveyEditor_Questions_AddQuestion {
+  @extend .well;
+  @extend .well-lg;
+  text-align: center;
+
+  h4 {
+    margin: 0 0 20px;
+  }
+
+  ul {
+    @extend .list-inline;
+
+    li {
+      padding: 0 60px;
+
+      a {
+        display: inline-block;
+        width: 144px;
+        height: 114px;
+        text-indent: -99999999px;
+      }
+
+      &.SurveyEditor_Questions_AddQuestion-Multiple-Choice a {
+        background-image: asset-url("components/SurveyEditor/multiple-choice.png");
+      }
+
+      &.SurveyEditor_Questions_AddQuestion-Text a {
+        background-image: asset-url("components/SurveyEditor/text.png");
+      }
+    }
+  }
+}

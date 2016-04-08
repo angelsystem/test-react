@@ -1,0 +1,44 @@
+<% view = AdminRegistrationsView::New.new(@admin_registration) %>
+
+<div class="center-form">
+  <h1>Sign Up</h1>
+
+  <%= form_for(@admin_registration, url: register_path) do |f| %>
+    <div class="form-group <%= "has-error" if view.errors_on?(:email) %>">
+      <%= f.label :email, class: "control-label" %>
+      <%= f.email_field :email, placeholder: "Email Address", class: "form-control" %>
+      <% if view.errors_on?(:email) %>
+        <div class="help-block">
+          Email <%= view.error_message_for(:email) %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="form-group <%= "has-error" if view.errors_on?(:password) %>">
+      <%= f.label :password, class: "control-label" %>
+      <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+      <% if view.errors_on?(:password) %>
+        <div class="help-block">
+          Password <%= view.error_message_for(:password) %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="form-group <%= "has-error" if view.errors_on?(:password_confirmation) %>">
+      <%= f.label :password_confirmation, class: "control-label" %>
+      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
+      <% if view.errors_on?(:password_confirmation) %>
+        <div class="help-block">
+          Password Confirmation <%= view.error_message_for(:password_confirmation) %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Sign Up", class: "btn btn-default" %>
+      <span class="btn-aside pull-right">
+        Already have an account? <%= link_to "Sign In", sign_in_path %>
+      </span>
+    </div>
+  <% end %>
+</div>

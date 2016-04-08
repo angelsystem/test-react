@@ -1,0 +1,7 @@
+.Survey_Question {
+  margin-bottom: 20px;
+
+  .Survey_Question-Help-Text p {
+    @extend .help-block;
+  }
+}

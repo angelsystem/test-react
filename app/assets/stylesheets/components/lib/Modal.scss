@@ -1,0 +1,43 @@
+.Modal {
+  @extend .modal;
+  @extend .fade;
+  @extend .in;
+  display: block;
+  background-color: rgba(0,0,0,0.5);
+
+  .Modal-Dialog {
+    @extend .modal-dialog;
+
+    .Modal-Content {
+      @extend .modal-content;
+    }
+
+    .Modal-Header {
+      @extend .modal-header;
+
+      h4 {
+        @extend .modal-title;
+      }
+    }
+
+    .Modal-Body {
+      @extend .modal-body;
+    }
+
+    .Modal-Footer {
+      @extend .modal-footer;
+
+      button {
+        @extend .btn;
+
+        &:first-child {
+          @extend .btn-default;
+        }
+
+        &:last-child {
+          @extend .btn-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import './Survey/Question';
+@import './Survey/Question/MultipleChoice';
+@import './Survey/Question/Text';
+
+.Survey {
+  margin-top: 30px;
+
+  > input[type="submit"] {
+    @extend .btn;
+    @extend .btn-info;
+  }
+}

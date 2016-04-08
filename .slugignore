@@ -1,0 +1,9 @@
+/spec
+/log
+/vagrant_scripts
+/cookbooks
+/tmp
+
+Cheffile
+Cheffile.lock
+Vagrantfile

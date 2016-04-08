@@ -1,0 +1,54 @@
+.SurveyEditor_Questions_QuestionList_Question {
+  @extend .panel;
+  @extend .panel-default;
+  @extend .panel-body;
+  margin-bottom: 20px;
+
+  .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Title {
+    @extend .form-group;
+
+    input {
+      @extend .form-control;
+    }
+  }
+
+  .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Help-Text {
+    @extend .form-group;
+
+    input {
+      @extend .form-control;
+    }
+  }
+
+  .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Type {
+    @extend .form-group;
+
+    select {
+      @extend .form-control;
+    }
+  }
+
+  .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Response {
+    @extend .well;
+    @extend .form-group;
+  }
+
+  .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Actions {
+    margin-top: 20px;
+
+    .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Actions-Save-Changes {
+      @extend .btn;
+      @extend .btn-success;
+    }
+
+    .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Actions-Discard-Changes {
+      @extend .text-muted;
+      margin-left: 20px;
+    }
+
+    .SurveyEditor_Questions_QuestionList_Question_EditableSurveyQuestion-Actions-Remove-Question {
+      @extend .text-danger;
+      @extend .pull-right;
+    }
+  }
+}

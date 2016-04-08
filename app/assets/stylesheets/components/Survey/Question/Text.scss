@@ -1,0 +1,17 @@
+.Survey_Question_Text {
+  @extend .form-group;
+
+  input {
+    @extend .form-control;
+  }
+
+  .Survey_Question_Text-Invalid {
+    input {
+      border-color: $state-danger-text;
+    }
+
+    .Survey_Question_Text-Error-Message {
+      color: $state-danger-text;
+    }
+  }
+}

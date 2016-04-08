@@ -1,0 +1,51 @@
+.SurveyEditor_Attributes {
+  margin-bottom: 20px;
+  border-bottom: 1px solid $gray-light;
+
+  // Title is a clickable <h2> that turns into a text input.
+  .SurveyEditor_Attributes-Title {
+    @extend .row;
+
+    .SurveyEditor_Attributes-Title-Column {
+      @extend .col-sm-8;
+    }
+
+    h2 {
+      margin-top: 0;
+
+      &:hover {
+        background-color: $gray-lighter;
+        cursor: pointer;
+      }
+    }
+
+    input {
+      @extend .form-control;
+      @extend .input-lg;
+    }
+  }
+
+  // Description is a clickable <p> that turns into a textarea.
+  .SurveyEditor_Attributes-Description {
+    @extend .row;
+
+    .SurveyEditor_Attributes-Description-Column {
+      @extend .col-sm-8;
+    }
+
+    p {
+      span {
+        @extend .text-muted;
+      }
+
+      &:hover {
+        background-color: $gray-lighter;
+        cursor: pointer;
+      }
+    }
+
+    textarea {
+      @extend .form-control;
+    }
+  }
+}

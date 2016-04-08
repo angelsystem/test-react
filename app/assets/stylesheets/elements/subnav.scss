@@ -1,0 +1,8 @@
+.subnav {
+  margin-top: -20px;
+  background-color: #fff;
+}
+
+.navbar + .subnav {
+  border-width: 0 0 1px;
+}

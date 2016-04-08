@@ -1,0 +1,3 @@
+<% survey_editor_component = SurveysView::SurveyEditor.new(@survey) %>
+
+<%= react_component("SurveyEditor", survey_editor_component.as_hash, prerender: true) %>

@@ -1,0 +1,30 @@
+.SurveyEditor_Questions_QuestionList_Question_MultipleChoice {
+  @include sortable;
+  @extend .form-inline;
+
+  .SurveyEditor_Questions_QuestionList_Question_MultipleChoice-Add-Option,
+  .SurveyEditor_Questions_QuestionList_Question_MultipleChoice_RadioOption,
+  .SurveyEditor_Questions_QuestionList_Question_MultipleChoice_OtherOption {
+    @extend .radio;
+    display: block;
+    margin-bottom: 10px;
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      @extend .form-control;
+      margin-right: 10px;
+    }
+
+    a span {
+      @extend .glyphicon;
+      @extend .glyphicon-remove;
+    }
+  }
+
+  .SurveyEditor_Questions_QuestionList_Question_MultipleChoice-Error-Message {
+    color: $state-danger-text;
+  }
+}

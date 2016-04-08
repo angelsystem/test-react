@@ -1,0 +1,15 @@
+body#surveys-index {
+
+  .surveys-list-item {
+    display: table;
+    width: 100%;
+    font-size: $font-size-large;
+    border-bottom: 1px solid $gray-light;
+
+    div {
+      display: table-cell;
+      padding: 15px 0;
+    }
+  }
+
+}
