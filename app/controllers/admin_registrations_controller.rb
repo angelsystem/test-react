@@ -6,11 +6,13 @@ class AdminRegistrationsController < ApplicationController
 
   # GET /register
   def new
+
     @admin_registration = AdminRegistration.new
   end
 
   # POST /register
   def create
+
     @admin_registration = AdminRegistration.new(admin_registration_params)
 
     if @admin_registration.create!
@@ -26,6 +28,7 @@ class AdminRegistrationsController < ApplicationController
 
   # Internal: Allowed AdminRegistration params.
   def admin_registration_params
+    
     params.require(:admin_registration).permit(
       :email,
       :password,

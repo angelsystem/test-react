@@ -11,6 +11,7 @@ class AdminSessionsController < ApplicationController
 
   # POST /sign_in
   def create
+
     @admin_session = AdminSession.new(admin_session_params)
 
     if @admin_session.authenticate!
